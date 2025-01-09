@@ -1,26 +1,110 @@
-<html>
-	<head>
-<title>Register</title>
-</head>	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Register Form</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f9c74f, #f94144, #90be6d, #577590);
+      background-size: 300% 300%;
+      animation: gradientMove 8s infinite ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+      padding: 30px 40px;
+      text-align: center;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      color: #e85d04;
+      text-transform: uppercase;
+    }
+
+    .container h2 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #6a4c93;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    form label {
+      font-weight: bold;
+      color: #118ab2;
+      text-align: left;
+      font-size: 16px;
+    }
+
+    form input[type="text"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      width: 100%;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form input[type="submit"] {
+      padding: 12px;
+      font-size: 18px;
+      background: linear-gradient(135deg, #f94144, #f3722c, #f8961e, #f9c74f);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease-in-out;
+    }
+
+    form input[type="submit"]:hover {
+      background: linear-gradient(135deg, #90be6d, #43aa8b, #577590, #277da1);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
 <body>
-	<h1 style="text-align:center;">WELCOME TO STUDENT REGISTER FORM</h1>
-	<pre>
-			<h2>Fill mandotary Field</h2>
-			<form action="register" method="POST">
-				ID  : <input type="text" name="id"/>
-				NAME: <input type="text" name="name"/>
-				AGE : <input type="text" name="age"/>
-				
-				<input type="submit" value="CREATE"/>
-			</form>
-			</pre>
-	
+  <div class="container">
+    <h1>WELCOME TO STUDENT REGISTER FORM</h1>
+    <h2>Fill Mandatory Fields</h2>
+    <form action="register" method="POST">
+      <label for="id">ID:</label>
+      <input type="text" id="id" name="id" placeholder="Enter your ID" required>
+
+      <label for="name">NAME:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+      <label for="age">AGE:</label>
+      <input type="text" id="age" name="age" placeholder="Enter your age" required>
+
+      <input type="submit" value="CREATE">
+    </form>
+  </div>
 </body>
-
-
-
-
-
-
-
 </html>
