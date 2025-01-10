@@ -19,7 +19,7 @@ public class Login {
 	@Autowired
 	private StudentRepo repo;
 
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String home() {
 
 		return "home";
