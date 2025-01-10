@@ -8,53 +8,98 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #90caf9, #1e88e5);
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #6a11cb, #2575fc);
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       text-align: center;
+      animation: gradientAnimation 6s infinite alternate;
+    }
+
+    @keyframes gradientAnimation {
+      0% {
+        background: linear-gradient(120deg, #6a11cb, #2575fc);
+      }
+      100% {
+        background: linear-gradient(120deg, #ff7e5f, #feb47b);
+      }
     }
 
     .container {
-      background-color: rgba(255, 255, 255, 0.2);
-      padding: 30px 40px;
-      border-radius: 15px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
 
     h1 {
-      margin-bottom: 20px;
-      font-size: 32px;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     }
-#coooooo
+
     a {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 16px;
+      margin: 15px 10px;
+      padding: 15px 30px;
+      font-size: 18px;
       font-weight: bold;
       text-decoration: none;
-      color: #1e88e5;
-      background-color: #ffffff;
-      border-radius: 8px;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      color: #ffffff;
+      background: linear-gradient(90deg, #6a11cb, #2575fc);
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease-in-out;
     }
 
     a:hover {
-      background-color: #1976d2;
-      color: white;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      transform: scale(1.1);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 30px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+      }
+
+      a {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Successfully Registered!</h1>
-    <a href="http://localhost:9191/form">Go Back to Register Page</a>
+    <h1>Registration Successful!</h1>
+    <a href="http://192.168.1.205:9191/form">Go Back to Register</a>
+    <a href="http://192.168.1.205:9191/records">View All Records</a>
   </div>
 </body>
 </html>
